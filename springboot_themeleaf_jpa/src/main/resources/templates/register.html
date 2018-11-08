@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Register Page</title>
+<!-- 响应式设计 -->
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="resources/bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.container-fluid.w-25 {
+	position: fixed;
+	margin-left: 36%;
+	margin-top: 19%; 
+}
+
+</style>
+</head>
+<body>
+<div class="container-fluid w-25">
+
+	<form th:action="@{register}" method="post" th:object="${user}">
+		<div class="form-group">
+			<label for="inputName">用户名</label>
+		    <input type="text" th:field="*{name}" class="form-control" id="inputName"  placeholder="用户名" />
+		</div>
+		<div class="form-group">
+			<label for="inputPassword">密码</label> 
+			<input type="password" th:field="*{pwd}" class="form-control" id="inputPassword" placeholder="密码" /> 
+		</div>
+		<div class="form-group">
+			<label for="inputPasswords">确认密码</label> 
+			<input type="password" name="pwds" class="form-control" id="inputPasswords" placeholder="确认密码" /> 
+		</div>
+		<button type="submit" class="btn btn-primary">注册</button>
+	</form>
+</div>
+
+	<script type="text/javascript" src="resources/bower_components/jquery/dist/jquery.slim.min.js">
+	</script>
+	<script type="text/javascript" src="resources/bower_components/bootstrap/dist/js/bootstrap.min.js">
+	</script>
+	
+	
+	
+</body>
+</html>
