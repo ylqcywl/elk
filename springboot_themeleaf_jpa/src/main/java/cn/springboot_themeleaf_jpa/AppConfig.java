@@ -25,7 +25,7 @@ public class AppConfig extends WebMvcConfigurerAdapter{
 			ds.setUrl(env.getProperty("spring.datasource.url").trim());
 			ds.setUsername(env.getProperty("spring.datasource.username").trim());
 			ds.setPassword(env.getProperty("spring.datasource.password").trim());
-			ds.setDriverClassName(env.getProperty("spring.datasource.driver-class-name").trim());;
+			ds.setDriverClassName(env.getProperty("spring.datasource.driver-class-name").trim());
 			return ds;
 		}
 }
